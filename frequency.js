@@ -7,12 +7,20 @@ SampleText = function ( text, freqTable ) {
 	this.freqRef = freqTable;
 
 	this.frequencies = (function () {
-		var i, arr, curChar;
+		var i, arr, curChar, surrogate;
 
 		arr = [];
 
 		for ( i = 0; i < this.text.length; i++ ) {
 			curChar = this.text[i];
+			surrogate = this.text[i + 1];
+
+			// If we find a combining tilde, we merge and do a lookup on the
+			// two piece character instead
+			if (surrogate === "\u0303") {
+				curChar = curChar + surrogate;
+				i++;
+			}
 
 			if ( this.freqRef[ curChar ] !== undefined) {
 				if ( arr[ curChar ] === undefined ) {
@@ -94,26 +102,26 @@ juilland = {
 	"p" : 0.0368,
 	"v" : 0.0321,
 	"n" : 0.0289,
-	"ɑ̃" : 0.0289,
+	"\u0251\u0303" : 0.0289,
 	"u" : 0.0286,
 	"ʒ" : 0.0208,
 	"y" : 0.0204,
 	"ɔ" : 0.0194,
-	"ɔ̃" : 0.0185,
+	"\u0254\u0303" : 0.0185,
 	"j" : 0.0181,
 	"w" : 0.0150,
 	"f" : 0.0131,
 	"b" : 0.0120,
 	"ɑ" : 0.0118,
 	"o" : 0.0110,
-	"ε̃" : 0.0109,
+	"\u03B5\u0303" : 0.0109,
 	"z" : 0.0073,
 	"ø" : 0.0071,
 	"ʃ" : 0.0062,
 	"ɥ" : 0.0053,
 	"œ" : 0.0051,
 	"g" : 0.0046,
-	"œ̃" : 0.0043,
+	"\u0153\u0303" : 0.0043,
 	"ɲ" : 0.0012
 };
 
