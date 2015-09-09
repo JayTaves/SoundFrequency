@@ -1,0 +1,15 @@
+td, th {
+	text-align: right;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+tr.title * {
+	border-collapse: true;
+	border-bottom: 1px solid black;
+	font-weight: normal;
+	padding: 5px;
+}

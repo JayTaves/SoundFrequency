@@ -14,7 +14,7 @@ tableRow = function (chr, count, jfreq, freq) {
 SampleText = function ( text, freqTable ) {
 
 	this.text = text;
-	this.total = text.length;
+	this.total = 0;
 	this.freqRef = freqTable;
 
 	this.frequencies = (function () {
@@ -38,11 +38,11 @@ SampleText = function ( text, freqTable ) {
 					arr[ curChar ] = {
 						count : 1
 					};
-
-					this.total++;
 				} else {
 					arr[ curChar ].count++;
 				}
+
+				this.total++;
 			} else {
 				// The character wasn't in the list Juilland defines. e.g. a
 				// space or some other character
@@ -93,6 +93,8 @@ SampleText = function ( text, freqTable ) {
 
 	this.createTable = function (elem) {
 		var i, row, character, entry;
+
+		elem.children().first().nextAll().remove();
 
 		for (i = this.sortedFreqs.length - 1; i > -1; i--) {
 			entry = this.sortedFreqs[i];
@@ -150,7 +152,8 @@ $(document).ready(function () {
 
 	$("textarea#phonemes").on("input", function () {
 		text = $(this).val();
-		$("p#text").text(text);
+		text = text.replace("\n", "</ br></ br>");
+		$("p#text").html(text);
 
 		analysis = new SampleText(text, juilland);
 		analysis.createTable($("table#freqtable").children("tbody"));
