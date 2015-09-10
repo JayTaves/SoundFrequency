@@ -28,6 +28,7 @@ tr.title * {
 }
 
 div#copiedtext {
+	display: none;
 	width: 723px;
 }
 
@@ -38,10 +39,17 @@ div#right {
 div#left {
 	float: left;
 	margin-right: 50px;
+	margin-left: 50px;
 }
 
 p#title {
 	font-size: 24px;
+}
+
+p#description {
+	text-align: left;
+	margin-left: 50px;
+	width: 723px;
 }
 
 p.title {
@@ -49,5 +57,9 @@ p.title {
 }
 
 .selected {
-	background-color: yellow;
+	background-color: lightgray;
+}
+
+.clicked {
+	background-color: gray;
 }

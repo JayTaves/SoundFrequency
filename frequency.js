@@ -11,11 +11,18 @@ tableRow = function (chr, count, jfreq, freq) {
 				"<td>" +
 					roundToN(Math.abs(jfreq - freq) / jfreq * 100, 2) + "</td>" +
 			"</tr>");
+
 	row.hover(function () {
 		$("a").removeClass("selected");
 		$("a." + chr).addClass("selected");
 	}, function () {
 		$("a." + chr).removeClass("selected");
+	});
+
+	row.click(function () {
+		$("a." + chr).toggleClass("clicked");
+		$(this).toggleClass("clicked");
+		$("a, tr").not($(this)).not("." + chr).removeClass("clicked");
 	});
 
 	return row;
@@ -177,11 +184,12 @@ $(document).ready(function () {
 
 	$("textarea#phonemes").on("input", function () {
 		text = $(this).val();
-		//text = text.split("\n").join("</br>");
-		// $("p#text").html(text);
 
 		analysis = new SampleText(text, juilland);
+
 		$("p#text").html(analysis.bodyStr);
+		$("div#copiedtext").show();
+
 		analysis.createTable($("table#freqtable").children("tbody"));
 	});
 });
