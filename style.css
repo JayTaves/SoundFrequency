@@ -12,6 +12,10 @@ table#freqtable {
 	display: none;
 }
 
+span.ital {
+	font-style: italic;
+}
+
 tr:not(.title) {
 	cursor: pointer;
 }
