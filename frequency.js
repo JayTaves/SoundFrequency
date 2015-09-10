@@ -1,4 +1,4 @@
-var SampleText, juilland, tableRow, analysis, roundToN;
+var SampleText, juilland, tableRow, analysis, roundToN, texteZola, textePonge;
 
 tableRow = function (chr, count, jfreq, freq) {
 	var row;
@@ -179,6 +179,9 @@ juilland = {
 	"ɲ" : 0.0012
 };
 
+texteZola = "obudlaʁygenego lɔʁskɔ̃vjε̃dekε ɔ̃tʁuvləpɑsaʒdypɔ̃nœf ynsɔʁtədəkɔʁidɔʁetʁwatesɔ̃bʁ\n kivadlaʁymazaʁinalaʁydsεn səpasaʒ atʁɑ̃tpadlɔ̃edødlaʁʒ oplys ilεpaveddalʒonɑtʁ yze desele syɑ̃tuʒuʁzynymiditeɑkʁ ləvitʁajkilkuvʁ kupeaɑ̃glədʁwa εnwaʁdəkʁas\n\n paʁleboʒuʁdete kɑ̃tε̃luʁsɔlεjbʁylleʁy ynklaʁteblɑ̃ʃɑtʁ tobdevitʁəsal etʁεnmizeʁabləmɑ̃ dɑ̃lpɑsaʒ paʁlevilε̃ʒuʁdivεʁ paʁlematinedbʁujaʁ levitʁənəʒεtkədlanɥisyʁledalglyɑ̃t dəlanɥisalieiɲɔbl\n\n agoʃsəkʁøzdebutikzɔpskyʁbɑsekʁɑze lεsɑ̃eʃapedesufləfʁwadkavo iljaladebukinist demaʁʃɑ̃dʒwεdɑ̃fɑ̃ dekaʁtɔnje dɔ̃lezetalaʒ gʁidpusjεʁ dɔʁməvagmɑ̃dɑ̃lɔ̃bʁ levitʁin fεtdəptikaʁo mwaʁetʁɑ̃ʒmɑ̃lemaʁʃɑ̃diz dəʁflεvεʁdɑtʁ odla dεʁjεʁlezetalaʒ lebutikplεndətenεbʁ sɔ̃totɑ̃dətʁulygybʁ dɑ̃lekεlsaʒitdefɔʁməbizaʁ\n\n adʁwat syʁtutlalɔ̃gœʁdypasaʒ setɑ̃ynmyʁajkɔ̃tʁəlakεl lebutikjedɑ̃fas ɔ̃plakedetʁwataʁmwaʁ dezɔbʒεsɑ̃nɔ̃ demaʁʃɑ̃ndizublijeladpɥivε̃tɑ̃ sjetalləlɔ̃dmε̃splɑ̃ʃ pε̃tdynɔʁibləkulœʁbʁyn ynmaʁʃɑ̃ddəbiʒufo setetablidɑ̃zyndezaʁmwaʁ εlyvɑ̃debagdəkε̃zsu delikatmɑ̃poze syʁε̃lidvluʁblø ofɔ̃dynbwatɑ̃nakaʒu\n\n odsydyvitʁaj ləmyʁajmɔ̃t nwaʁ gʁosjεʁmɑ̃kʁepi kɔmkuvεʁdynlεpʁ etutkutyʁedsikatʁis\n\n ləpɑsaʒdypɔ̃nœf nεpɑzε̃ljødpʁɔmnad ɔ̃lpʁɑ̃puʁeviteʁε̃detuʁ puʁgaɲekεlkəminyt ilεtʁavεʁsepaʁε̃pyblikdəʒɑ̃afeʁe dɔ̃lyniksusi edalevitedʁwadvɑ̃ø. ɔ̃nivwadezapʁɑ̃tiɑ̃tablijedtʁavaj dezuvʁiεʁʁəpɔʁtɑ̃lœʁuvʁaʒ dezɔmedefam tənɑ̃depakεsulœʁbʁɑ ɔ̃nivwaɑ̃kɔʁdevjεjaʁ sətʁεnɑ̃dɑ̃lkʁepyskylmɔʁn kitɔ̃bdevitʁ edebɑ̃ddəptizɑ̃fɑ̃ kivjεnla osɔʁtiʁdəlekɔl puʁfεʁε̃tapaʒɑ̃kuʁɑ̃ ɑ̃tapɑ̃akudsabosyʁledal tutlaʒuʁne sεtε̃bʁɥisεkepʁesedpɑ sɔnɑ̃syʁlapjεʁ avεkyniʁegylaʁiteiʁitɑ̃t pεʁsɔnnəpaʁl pεʁsɔnnəstasjɔn ʃakε̃kuʁasezɔkypasjo latεtbɑs maʁʃɑ̃ʁapidmɑ̃ sɑ̃dɔneʁobutikε̃sœlkudœj lebutikjeʁgaʁdədε̃nεʁε̃kjε lepɑsɑ̃ki paʁmiʁakl saʁεtdəvɑ̃lœʁzetalaʒ\n\n ləswaʁ tʁwabεkdəgɑz ɑ̃nfεʁmedɑ̃delɑ̃tεʁnəluʁdekaʁe eklεʁləpɑsaʒ sebεkdəgɑz pɑ̃dyovitʁaj syʁlekεlilʒεtdetaʃdəklaʁtefov lεsɑ̃tɔ̃beotuʁdø deʁɔ̃dynlɥœʁpɑl kivasijesɑ̃blədispaʁεtʁəpaʁmɔmɑ̃ ləpɑsaʒpʁɑ̃laspεsinistʁədε̃veʁitabləkupgɔʁʒ\n\n dəgʁɑ̃dzɔ̃bʁəsalɔ̃ʒsyʁledal desufləzymidvjεndəlaʁy ɔ̃diʁεyngalʁisuteʁεn vagmɑ̃ekleʁe paʁtʁwalɑ̃pfyneʁεʁ lemaʁʃɑ̃skɔ̃tɑ̃t puʁtuteklεʁaʒ demεgʁəʁejɔ̃ kəlebεkdəgɑz ɑ̃vwatalœʁvitʁin ilzalymsœlmɑ̃ dɑ̃lœʁbutik ynlɑ̃pmynidε̃abaʒuʁ kilpozsyʁləkwε̃dlœʁkɔ̃twaʁ elepɑsɑ̃pœvtalɔʁdistε̃ge skiljaofɔ̃dəsetʁu ulanɥiabitpɑ̃dɑ̃lʒuʁ […]\n\n iljakεlkəzane ɑ̃fasdəsεtmaʁʃɑ̃d sətʁuvεtynbutik dɔ̃lebwazʁidvεʁbutεj sɥεlymiditepaʁtutlœʁfɑ̃t lɑ̃sεɲ fεtdynplɑ̃ʃetʁwatelɔ̃g pɔʁtεtɑ̃lεtʁənwaʁ ləmomεʁsəʁi esyʁε̃devitʁədlapɔʁt etεtekʁiε̃nɔ̃dfam teʁεsʁakε̃ ɑ̃kaʁaktεʁʁuʒ adʁwateagoʃ sɑ̃nfɔ̃sεdevitʁinpʁɔfɔ̃d tapisedpapjeblø";
+textePonge = "lɥitʁ, də la ɡʁosœʁ dɛ̃ ɡalɛ mwajɛ̃, ɛ dyn apaʁɑ̃s ply ʁyɡøːz, dyn kulœʁ mwɛ̃ yni, bʁijamɑ̃ blɑ̃ʃatʁ. sɛt-ɛ̃ mɔ̃d ɔpinjɑtʁəmɑ̃ _*3*_. puʁtɑ̃ ɔ̃ pø luvʁiːʁ: il fo alɔʁ la təniʁ o kʁø dɛ̃ tɔʁʃɔ̃, sə sɛʁviʁ dɛ̃ kuto ebʁeʃee pø fʁɑ̃, si ʁəpʁɑ̃dʁ a plyzjœʁ fwa. le dwa kyʁjø si kup, si kas lez- ɔ̃ɡl : sɛt- ɛ̃ tʁavaj ɡʁosje. le ku kɔ̃ lɥipɔʁt maʁk sɔ̃n- ɑ̃vlɔp də ʁɔ̃ blɑ̃, dyn sɔʁt də alo.\n\n a lɛ̃teʁjœʁ lɔ̃ tʁuv tut- ɛ̃ mɔ̃ːd, a bwaʁ e a mɑ̃ʒe : su ɛ̃ fiʁmamɑ̃ (a pʁɔpʁəmɑ̃ paʁle) də nakʁ, le sjø dɑ̃dəsy safɛs syʁ le sjø dɑ̃ dəsu, puʁ nə ply fɔʁme kyn maːʁ, ɛ̃ saʃɛ viskø e vɛʁdatʁ, ki fly e ʁəfly a lɔdœʁe a la vy, fʁɑ̃ʒe dyn dɑ̃tɛl nwaʁatʁ syʁ le bɔːʁ.\n\n paʁfwa tʁɛ ʁaʁ yn fɔʁmyl pɛʁl a lœʁ ɡozje də nakʁ, du lɔ̃ tʁuv osito a sɔʁne";
+
 $(document).ready(function () {
 	var text;
 
@@ -191,5 +194,13 @@ $(document).ready(function () {
 		$("div#copiedtext").show();
 
 		analysis.createTable($("table#freqtable").children("tbody"));
+	});
+
+	$("input#zola").click(function () {
+		$("textarea#phonemes").val(texteZola).trigger("input");
+	});
+
+	$("input#ponge").click(function () {
+		$("textarea#phonemes").val(textePonge).trigger("input");
 	});
 });

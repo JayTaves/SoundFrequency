@@ -48,8 +48,11 @@ p#title {
 
 p#description {
 	text-align: left;
-	margin-left: 50px;
 	width: 723px;
+}
+
+div#top {
+	margin-left: 50px;
 }
 
 p.title {
