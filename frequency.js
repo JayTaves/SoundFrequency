@@ -1,13 +1,13 @@
-var SampleText, juilland, tableRow;
+var SampleText, juilland, tableRow, analysis, roundToN;
 
 tableRow = function (chr, count, jfreq, freq) {
 	return 	"<tr>" +
 				"<td>" + chr + "</td>" +
 				"<td>" + count + "</td>" +
-				"<td>" + (jfreq * 100).toString().substr(0, 4) + "</td>" +
-				"<td>" + (freq * 100).toString().substr(0, 4) + "</td>" +
-				"<td>" + (Math.abs(jfreq - freq) * 100).toString().substr(0, 4) +
-					"</td>" +
+				"<td>" + roundToN(jfreq * 100, 2) + "</td>" +
+				"<td>" + roundToN(freq * 100, 2) + "</td>" +
+				"<td>" +
+					roundToN(Math.abs(jfreq - freq) / jfreq * 100, 2) + "</td>" +
 			"</tr>";
 };
 
@@ -105,7 +105,13 @@ SampleText = function ( text, freqTable ) {
 
 			elem.append(row);
 		}
+
+		elem.parent().show();
 	};
+};
+
+roundToN = function (num, N) {
+	return Math.round(num * Math.pow(10, N)) / Math.pow(10, N);
 };
 
 juilland = {
@@ -148,11 +154,11 @@ juilland = {
 };
 
 $(document).ready(function () {
-	var text, analysis;
+	var text;
 
 	$("textarea#phonemes").on("input", function () {
 		text = $(this).val();
-		text = text.replace("\n", "</ br></ br>");
+		text = text.split("\n").join("</br>");
 		$("p#text").html(text);
 
 		analysis = new SampleText(text, juilland);

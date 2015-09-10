@@ -3,29 +3,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Frequencies</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="frequency.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div>
-		<textarea id='phonemes' rows='20' cols='100'
-			placeholder='Paste text here'></textarea>
+		<p id='title' class='title'>Analyse de Phonèmes</p>
 	</div>
-	<div>
-		<p>Votre Texte</p>
-		<p id='text'></p>
+	<div id='left'>
+		<div>
+			<textarea id='phonemes' rows='20' cols='100'
+				placeholder='Paste text here'></textarea>
+		</div>
+		<div id='copiedtext'>
+			<p class='title'>Votre Texte</p>
+			<p id='text'></p>
+		</div>
 	</div>
-	<table id='freqtable'>
-		<tbody>
-			<tr class='title'>
-				<th>Phonème</th>
-				<th>Compte</th>
-				<th>% Juilland</th>
-				<th>Votre %</th>
-				<th>Difference</th>
-			</tr>
-		</tbody>
-	</table>
+	<div id='right'>
+		<table id='freqtable'>
+			<tbody>
+				<tr class='title'>
+					<th>Phonème</th>
+					<th>Compte</th>
+					<th>% Juilland</th>
+					<th>Votre %</th>
+					<th>Difference</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

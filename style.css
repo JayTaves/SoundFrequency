@@ -1,10 +1,23 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 td, th {
 	text-align: right;
 }
 
-table {
+table#freqtable {
 	border-spacing: 0;
 	border-collapse: collapse;
+	display: none;
+}
+
+tr:not(.title) {
+	cursor: pointer;
+}
+
+tr:not(.title):hover {
+	background-color: lightgray;
 }
 
 tr.title * {
@@ -12,4 +25,25 @@ tr.title * {
 	border-bottom: 1px solid black;
 	font-weight: normal;
 	padding: 5px;
+}
+
+div#copiedtext {
+	width: 723px;
+}
+
+div#right {
+	float: left;
+}
+
+div#left {
+	float: left;
+	margin-right: 50px;
+}
+
+p#title {
+	font-size: 24px;
+}
+
+p.title {
+	text-align: center;
 }
