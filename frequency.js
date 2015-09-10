@@ -1,19 +1,30 @@
 var SampleText, juilland, tableRow, analysis, roundToN;
 
 tableRow = function (chr, count, jfreq, freq) {
-	return 	"<tr>" +
+	var row;
+
+	row = $("<tr>" +
 				"<td>" + chr + "</td>" +
 				"<td>" + count + "</td>" +
 				"<td>" + roundToN(jfreq * 100, 2) + "</td>" +
 				"<td>" + roundToN(freq * 100, 2) + "</td>" +
 				"<td>" +
 					roundToN(Math.abs(jfreq - freq) / jfreq * 100, 2) + "</td>" +
-			"</tr>";
+			"</tr>");
+	row.hover(function () {
+		$("a").removeClass("selected");
+		$("a." + chr).addClass("selected");
+	}, function () {
+		$("a." + chr).removeClass("selected");
+	});
+
+	return row;
 };
 
 SampleText = function ( text, freqTable ) {
 
 	this.text = text;
+	this.bodyStr = "";
 	this.total = 0;
 	this.freqRef = freqTable;
 
@@ -42,10 +53,18 @@ SampleText = function ( text, freqTable ) {
 					arr[ curChar ].count++;
 				}
 
+				this.bodyStr = this.bodyStr + "<a class='" + curChar + "'>" +
+					curChar + "</a>";
 				this.total++;
 			} else {
 				// The character wasn't in the list Juilland defines. e.g. a
 				// space or some other character
+				if (curChar === "\n") {
+					this.bodyStr = this.bodyStr + "</br>";
+				} else {
+					this.bodyStr = this.bodyStr +
+						$("<div></div>").text(curChar).html();
+				}
 			}
 
 		}
@@ -158,10 +177,11 @@ $(document).ready(function () {
 
 	$("textarea#phonemes").on("input", function () {
 		text = $(this).val();
-		text = text.split("\n").join("</br>");
-		$("p#text").html(text);
+		//text = text.split("\n").join("</br>");
+		// $("p#text").html(text);
 
 		analysis = new SampleText(text, juilland);
+		$("p#text").html(analysis.bodyStr);
 		analysis.createTable($("table#freqtable").children("tbody"));
 	});
 });

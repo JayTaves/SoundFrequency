@@ -47,3 +47,7 @@ p#title {
 p.title {
 	text-align: center;
 }
+
+.selected {
+	background-color: yellow;
+}
