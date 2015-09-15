@@ -9,7 +9,7 @@ tableRow = function (chr, count, jfreq, freq) {
 				"<td>" + roundToN(jfreq * 100, 2) + "</td>" +
 				"<td>" + roundToN(freq * 100, 2) + "</td>" +
 				"<td>" +
-					roundToN(Math.abs(jfreq - freq) / jfreq * 100, 2) + "</td>" +
+					roundToN((freq - jfreq) / jfreq * 100, 2) + "</td>" +
 			"</tr>");
 
 	row.hover(function () {
