@@ -70,3 +70,61 @@ p.title {
 .clicked {
 	background-color: gray;
 }
+
+.yellow {
+	background-color: #F3C300;
+}
+.purple {
+	background-color: #875692;
+}
+.orange {
+	background-color: #F38400;
+}
+.lightblue {
+	background-color: #A1CAF1;
+}
+.red {
+	background-color: #BE0032;
+}
+.buff {
+	background-color: #C2B280;
+}
+.green {
+	background-color: #008856;
+}
+.purplishpink {
+	background-color: #E68FAC;
+}
+.blue {
+	background-color: #0067A5;
+}
+.yellowishpink {
+	background-color: #F99379;
+}
+.violet {
+	background-color: #604E97;
+}
+.orangeyellow {
+	background-color: #F6A600;
+}
+.purplishred {
+	background-color: #B3446C;
+}
+.greenishyellow {
+	background-color: #DCD300;
+}
+.reddishbrown {
+	background-color: #882D17;
+}
+.yellowgreen {
+	background-color: #8DB600;
+}
+.yellowishbrown {
+	background-color: #654522;
+}
+.reddishorange {
+	background-color: #E25822;
+}
+.olivegreen {
+	background-color: #2B3D26;
+}

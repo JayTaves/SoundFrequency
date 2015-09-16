@@ -1,4 +1,5 @@
-var SampleText, juilland, tableRow, analysis, roundToN, texteZola, textePonge;
+var SampleText, juilland, tableRow, analysis, roundToN, texteZola, textePonge,
+colorList, charClicked;
 
 tableRow = function (chr, count, jfreq, freq) {
 	var row;
@@ -19,10 +20,26 @@ tableRow = function (chr, count, jfreq, freq) {
 		$("a." + chr).removeClass("selected");
 	});
 
-	row.click(function () {
-		$("a." + chr).toggleClass("clicked");
-		$(this).toggleClass("clicked");
-		$("a, tr").not($(this)).not("." + chr).removeClass("clicked");
+	row.bind("click", function () {
+		var color, oldColor;
+
+		if (charClicked[chr] === undefined) {
+			for (color in colorList) {
+				if (!colorList[color]) {
+					$(this).addClass(color);
+					$("a." + chr).addClass(color);
+					colorList[color] = true;
+					charClicked[chr] = color;
+					break;
+				}
+			}
+		} else {
+			oldColor = charClicked[chr];
+			$(this).removeClass(oldColor);
+			$("a." + chr).removeClass(oldColor);
+			colorList[oldColor] = false;
+			charClicked[chr] = undefined;
+		}
 	});
 
 	return row;
@@ -138,6 +155,30 @@ SampleText = function ( text, freqTable ) {
 
 roundToN = function (num, N) {
 	return Math.round(num * Math.pow(10, N)) / Math.pow(10, N);
+};
+
+charClicked = {};
+
+colorList = {
+	"yellow" : false,
+	"purple" : false,
+	"orange" : false,
+	"lightblue" : false,
+	"red" : false,
+	"buff" : false,
+	"green" : false,
+	"purplishpink" : false,
+	"blue" : false,
+	"yellowishpink" : false,
+	"violet" : false,
+	"orangeyellow" : false,
+	"purplishred" : false,
+	"greenishyellow" : false,
+	"reddishbrown" : false,
+	"yellowgreen" : false,
+	"yellowishbrown" : false,
+	"reddishorange" : false,
+	"olivegreen" : false
 };
 
 juilland = {
