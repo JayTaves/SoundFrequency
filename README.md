@@ -1,19 +1,18 @@
-See the demo here/ voire la site-web içi: http://jaytaves.github.io/SoundFrequency/
+See the demo here/ voire la site-web ici: http://jaytaves.github.io/SoundFrequency/
 
 #Français
-Ceci est un outil crée pour analyser les textes en éxaminant les différents sons
-utilisés par un auteur. Pour l'utiliser, vous devez déjà en avoir la traduction
-phonétique de votre texte. On peut faire la traduction on phonèmes sur de divers
-sites, comme [celui la](http://easypronunciation.com/fr/french-phonetic-transcription-converter).
-Apres avoir copié les phonèmes, collez-les dans la casse en bas. A droit
-apparaitra une tableau indiquant la nombre de fois que chaque phonème a été
-trouvé dans le texte et aussi le pourcentage de ce phonème dans le texte entier.
-On trouve aussi la pourcentage de chaque phonème dans une texte français
-"typique." Ces pourcentages pour un texte "typique" sont du a Juilland, Alphonse
-(1963) dans la _Dictionnaire inverse de la langue française_. On peut cliquer sur
-la liste de phonèmes pour voir ou ils se situent dans le texte.
+Ceci est un outil crée pour analyser les textes en examinant les différents sons 
+utilisés par un auteur. Pour l'utiliser, vous devez déjà avoir la traduction 
+phonétique de votre texte. On peut faire la traduction en phonèmes sur de divers sites, comme [celui là](http://easypronunciation.com/fr/french-phonetic-transcription-converter). 
+Apres avoir copié les phonèmes, collez-les dans la casse en bas. A droit apparaitra 
+un tableau indiquant le nombre de fois que chaque phonème a été trouvé dans le texte 
+et aussi le pourcentage de ce phonème dans le texte entier. On trouve aussi le pourcentage 
+de chaque phonème dans un texte français "typique." Ces pourcentages pour un 
+texte "typique" sont du a Juilland, Alphonse (1963) dans la _Dictionnaire 
+inverse de la langue française_. On peut cliquer sur la liste de phonèmes pour 
+voir ou ils se situent dans le texte.
 
-Ce projet a été créé par Jay Taves, pour la cours a Cornell de Français 3120.
+Ce projet a été créé par Jay Taves, pour la cours à Cornell de Français 3120.
 
 #English
 This is a utility for analyzing textes by looking at the different sounds that the
