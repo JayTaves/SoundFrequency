@@ -1,6 +1,6 @@
 See the demo here/ voire la site-web ici: http://jaytaves.github.io/SoundFrequency/
 
-#Français
+### Français
 Ceci est un outil crée pour analyser les textes en examinant les différents sons 
 utilisés par un auteur. Pour l'utiliser, vous devez déjà avoir la traduction 
 phonétique de votre texte. On peut faire la traduction en phonèmes sur de divers sites, comme [celui là](http://easypronunciation.com/fr/french-phonetic-transcription-converter). 
@@ -12,9 +12,9 @@ texte "typique" sont du a Juilland, Alphonse (1963) dans la _Dictionnaire
 inverse de la langue française_. On peut cliquer sur la liste de phonèmes pour 
 voir ou ils se situent dans le texte.
 
-Ce projet a été créé par Jay Taves, pour la cours à Cornell de Français 3120.
+Ce projet a été créé par Jay Taves, pour le cours de Français 3120 à Cornell.
 
-#English
+### English
 This is a utility for analyzing textes by looking at the different sounds that the
 author uses. To use it (it only supports French text for now), you need to have
 the phonetic translation of your text available. There are several sites for this
